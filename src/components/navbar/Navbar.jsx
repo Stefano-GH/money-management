@@ -17,8 +17,9 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faWallet} />
         </div>
         <div className={show ? "nav-right-wrapper show" : "nav-right-wrapper"}>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/uscite">Uscite</NavLink>
+            <NavLink className="link" to="/">Home</NavLink>
+            <NavLink className="link" to="/uscite">Uscite</NavLink>
+            <NavLink className="link" to="/entrate">Entrate</NavLink>
         </div>
         <div className="burgerMenu" onClick={toggleMenu}>
             &#9776;
