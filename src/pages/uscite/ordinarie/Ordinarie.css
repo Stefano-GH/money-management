@@ -1,0 +1,35 @@
+.ordinarie-side-wrapper{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.ordinarie-side-wrapper h2{
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #F97300;
+    padding-bottom: 10px;
+}
+
+.table-wrapper{
+    border-top: 1px solid #524C42;
+    width: 100%;
+}
+
+.label-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .ordinarie-side-wrapper{
+        width: 100%;
+        padding-bottom: 80px;
+    }
+}

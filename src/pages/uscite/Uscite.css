@@ -1,0 +1,68 @@
+.main-wrapper{
+    height: 90vh;
+}
+
+.uscite-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding-top: 20px;
+}
+
+.btn-wrapper{
+    position: fixed;
+    left: 2%;
+    bottom: 1.5%;
+    text-align: center;
+}
+
+.btns-opener{
+    font-size: 30px;
+    color: #F97300;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #111;
+}
+
+.btns-opener:hover{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.check-btn{
+    font-size: 35px;
+    color: green;
+    position: fixed;
+    bottom: 8%;
+    left: 4%;
+    border-radius: 50%;
+}
+
+.check-btn:hover{
+    cursor: pointer;
+    font-size: 45px;
+}
+
+.cancel-btn{
+    font-size: 35px;
+    color: red;
+    position: fixed;
+    bottom: 3%;
+    left: 6%;
+}
+
+.cancel-btn:hover{
+    cursor: pointer;
+    font-size: 45px;
+}
+
+@media screen and (max-width: 900px) {
+    .uscite-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
