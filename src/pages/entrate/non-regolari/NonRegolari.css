@@ -1,4 +1,4 @@
-.ordinarie-side-wrapper{
+.non-regolari-side-wrapper{
     width: 45%;
     height: 100%;
     display: flex;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.ordinarie-side-wrapper h2{
+.non-regolari-side-wrapper h2{
     font-size: 40px;
     font-family: sans-serif;
     font-weight: bold;
@@ -27,25 +27,8 @@
     padding-top: 5px;
 }
 
-.list-wrapper{
-    display: flex;
-    justify-content: center;
-}
-
-.list-wrapper input{
-    width: 25%;
-    text-align: center;
-}
-
-.list-wrapper select{
-    width: 25%;
-    text-align: center;
-}
-
-
-
 @media screen and (max-width: 900px) {
-    .ordinarie-side-wrapper{
+    .non-regolari-side-wrapper{
         width: 100%;
         padding-bottom: 80px;
     }

@@ -1,4 +1,4 @@
-.ordinarie-side-wrapper{
+.regolari-side-wrapper{
     width: 45%;
     height: 100%;
     display: flex;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.ordinarie-side-wrapper h2{
+.regolari-side-wrapper h2{
     font-size: 40px;
     font-family: sans-serif;
     font-weight: bold;
@@ -45,7 +45,7 @@
 
 
 @media screen and (max-width: 900px) {
-    .ordinarie-side-wrapper{
+    .regolari-side-wrapper{
         width: 100%;
         padding-bottom: 80px;
     }

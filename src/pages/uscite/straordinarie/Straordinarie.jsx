@@ -1,13 +1,30 @@
+/*--------------------------------------------------
+  LIBRARIES AND CONSTANTS
+  --------------------------------------------------
+*/
 import "./Straordinarie.css";
-import { data } from "../../../data/data";
-import ListElement from "../list-element/ListElement";
+import ListElement from "../../../components/list-element/ListElement";
 
-const Straordinarie = () => {
-    const tipologia = "straordinaria";
-    const lists = new Array(5).fill(<ListElement className="new-item" data="" importo="" note="" categoria="altro" />);
+const USCITE_STRAORDINARIE_TITOLO = "Uscite Straordinarie";
+
+
+/*--------------------------------------------------
+  STRAORDINARIE STRUCTURE
+  --------------------------------------------------
+*/
+const Straordinarie = ( {states,tipologia,handleStrInputChange} ) => {
+    const lists = [];
+
+    // genero le righe
+    states.map((state) => {
+        lists.push(
+            <ListElement key={state.row} row={state.row} data={state.data} importo={state.importo} note={state.note}
+                categoria={state.categoria} tipologia={tipologia} handleOrdInputChange={handleStrInputChange} />
+        );
+    })
 
     return <div className="straordinarie-side-wrapper">
-        <h2>Uscite Straordinarie</h2>
+        <h2>{USCITE_STRAORDINARIE_TITOLO}</h2>
         <div className="table-wrapper">
             <div className="label-wrapper">
                 <h3>  Data</h3>
@@ -15,11 +32,6 @@ const Straordinarie = () => {
                 <h3>Note</h3>
                 <h3>Categoria</h3>
             </div>
-            {data.map((el) => (
-                (el.tipologia === tipologia) ? 
-                    <ListElement data={el.data} importo={el.importo} note={el.note} categoria={el.categoria} tipologia={tipologia} />
-                    : null
-            ))}
             
             {lists}    
         

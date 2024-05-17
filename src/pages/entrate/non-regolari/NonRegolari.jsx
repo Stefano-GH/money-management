@@ -2,29 +2,29 @@
   LIBRARIES AND CONSTANTS
   --------------------------------------------------
 */
-import "./Ordinarie.css";
+import "./NonRegolari.css";
 import ListElement from "../../../components/list-element/ListElement";
 
-const USCITE_ORDINARIE_TITOLO = "Uscite Ordinarie";
+const ENTRATE_NON_REGOLARI_TITOLO = "Extra";
 
 
 /*--------------------------------------------------
-  ORDINARIE STRUCTURE
+  STRAORDINARIE STRUCTURE
   --------------------------------------------------
 */
-const Ordinarie = ( {states,tipologia,handleOrdInputChange} ) => {
+const NonRegolari = ( {states,tipologia,handleStrInputChange} ) => {
     const lists = [];
 
-    // genero le righe 
+    // genero le righe
     states.map((state) => {
         lists.push(
             <ListElement key={state.row} row={state.row} data={state.data} importo={state.importo} note={state.note}
-                categoria={state.categoria} tipologia={tipologia} handleOrdInputChange={handleOrdInputChange} />
+                categoria={state.categoria} tipologia={tipologia} handleOrdInputChange={handleStrInputChange} />
         );
     })
 
-    return <div className="ordinarie-side-wrapper">
-        <h2>{USCITE_ORDINARIE_TITOLO}</h2>
+    return <div className="non-regolari-side-wrapper">
+        <h2>{ENTRATE_NON_REGOLARI_TITOLO}</h2>
         <div className="table-wrapper">
             <div className="label-wrapper">
                 <h3>  Data</h3>
@@ -32,11 +32,11 @@ const Ordinarie = ( {states,tipologia,handleOrdInputChange} ) => {
                 <h3>Note</h3>
                 <h3>Categoria</h3>
             </div>
-
-            {lists}
             
+            {lists}    
+        
         </div>
-    </div>      
+    </div> 
 }
 
-export default Ordinarie;
+export default NonRegolari;

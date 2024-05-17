@@ -1,0 +1,13 @@
+.list-month-item-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-month-item-wrapper label{
+    text-align: center;
+}
+
+.list-month-item-wrapper input{
+    text-align: center;
+}

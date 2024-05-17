@@ -22,11 +22,11 @@ nav{
 
 .link{
     color: #E2DFD0;
-    font-size: 27px;
+    font-size: 23px;
 }
 
 .active{
-    color: grey;
+    color: rgb(150, 149, 149);
     text-decoration: underline;
 }
 

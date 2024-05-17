@@ -2,17 +2,17 @@
   LIBRARIES AND CONSTANTS
   --------------------------------------------------
 */
-import "./Ordinarie.css";
+import "./Regolari.css";
 import ListElement from "../../../components/list-element/ListElement";
 
-const USCITE_ORDINARIE_TITOLO = "Uscite Ordinarie";
+const ENTRATE_REGOLARI_TITOLO = "Buoni Pasto";
 
 
 /*--------------------------------------------------
-  ORDINARIE STRUCTURE
+  REGOLARI STRUCTURE
   --------------------------------------------------
 */
-const Ordinarie = ( {states,tipologia,handleOrdInputChange} ) => {
+const Regolari = ( {states,tipologia,handleOrdInputChange} ) => {
     const lists = [];
 
     // genero le righe 
@@ -23,8 +23,8 @@ const Ordinarie = ( {states,tipologia,handleOrdInputChange} ) => {
         );
     })
 
-    return <div className="ordinarie-side-wrapper">
-        <h2>{USCITE_ORDINARIE_TITOLO}</h2>
+    return <div className="regolari-side-wrapper">
+        <h2>{ENTRATE_REGOLARI_TITOLO}</h2>
         <div className="table-wrapper">
             <div className="label-wrapper">
                 <h3>  Data</h3>
@@ -39,4 +39,4 @@ const Ordinarie = ( {states,tipologia,handleOrdInputChange} ) => {
     </div>      
 }
 
-export default Ordinarie;
+export default Regolari;
