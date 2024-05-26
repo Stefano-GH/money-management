@@ -60,7 +60,7 @@ export const entrate = [
     }
 ];
 
-export const usciteMensili = [
+export const speseMensili = [
     {
         id: 1,
         anno: 2023,
@@ -98,7 +98,20 @@ export const usciteMensili = [
         piacere: 82.86,
         regali: 34.90,
         altro: 27.99,
-        totale: 721.51
+        totale: 721.51,
+    }
+]
+
+export const incassiMensili = [
+    {
+        id: 1,
+        anno: 2024,
+        mese: "apr",
+        stipendio: 0,
+        buoni_pasto: 140,
+        lezioni_private: 0,
+        regali: 400,
+        totale: 1587.00
     }
 ]
 

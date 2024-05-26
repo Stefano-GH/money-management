@@ -11,3 +11,31 @@
 .list-month-item-wrapper input{
     text-align: center;
 }
+
+.info-hidden{
+    display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    .list-month-item-wrapper input{
+        display: none;
+    }
+
+    .list-month-item-wrapper label{
+        width: 30%;
+    }
+
+    .info-hidden{
+        display: flex;
+    }
+
+    .info-hidden:hover{
+        cursor: pointer;
+        color: grey;
+    }
+
+    .info-selected{
+        border: 1px solid red;
+    }
+}

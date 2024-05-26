@@ -4,10 +4,14 @@
 */
 import "./Mensili.css";
 import { useState } from "react";
-import { usciteMensili } from "../../data/data";
-import ListMonthItem from "./list-month-item/ListMonthItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowsRotate } from "@fortawesome/free-solid-svg-icons";
+import Spese from "./spese/Spese";
+import Incassi from "./incassi/Incassi";
 
-const PAGE_TITLE = "Spese Mensili";
+const PAGE_TITLE_SPESE = "Spese Mensili";
+const PAGE_TITLE_INCASSI = "Incassi Mensili"
+const SWITCH_ICON = faArrowsRotate;
 
 
 /*--------------------------------------------------
@@ -15,52 +19,24 @@ const PAGE_TITLE = "Spese Mensili";
   --------------------------------------------------
 */
 const Mensili = () => {
-    const [data, setData] = useState(usciteMensili);
-    const campi = Object.keys(usciteMensili[0]);
-    const titles = [];
+    const [isSpese,setIsSpese] = useState(true);
 
-    // genero dinamicamente i titoli
-    const width = `${100 / campi.length}%`;
-    for (var i=0; i<campi.length; i++) {
-        if (campi[i] !== "id") {
-            const myTitle = campi[i].charAt(0).toUpperCase() + campi[i].slice(1);
-            titles.push(
-                <h4 key={`mensili-row-${i}`} style={{width:width}}>{myTitle}</h4>
-            );
-        }
+    // switch uscite con entrate
+    const handleSwitch = () => {
+        setIsSpese(!isSpese);
     }
 
-    // gestisco la variazione dei campi di input
-    const handleInputChange = (row, field, value) => {
-        const updatedState = data.map(item => {
-            if (item.id === row) {
-                return { ...item, [field]: value};
-            }
-            return item;
-        });
-        setData(updatedState);
-        console.log(data);
-    };
-
     return <div className="mensili-main-wrapper">
+        <div className="mensili-switch-wrapper" onClick={handleSwitch}>
+            <FontAwesomeIcon icon={SWITCH_ICON} />
+            <p>{isSpese ? "Incassi" : "Spese"}</p>
+        </div>
+
         <div className="mensili-title-wrapper">
-            <h2>{PAGE_TITLE}</h2>
+            <h2>{isSpese ? PAGE_TITLE_SPESE : PAGE_TITLE_INCASSI}</h2>
         </div>
 
-        <div className="mensili-switch-wrapper">
-            switch
-        </div>
-
-        <div className="mensili-data-wrapper">
-            <div className="mensili-data-titles-wrapper">
-                {titles}
-            </div>
-            <div className="mensili-data">
-                {data.map(month => (
-                    <ListMonthItem key={month.id} data={month} campi={campi} width={width} handleInputChange={handleInputChange} />
-                ))}
-            </div>
-        </div>
+        {isSpese ? <Spese /> : <Incassi />}
     </div>
 }
 
